@@ -56,9 +56,6 @@
 
     if(urlScheme == nil) return NO;
 
-    NSLog(@"url scheme:%@",[url scheme]);
-    NSLog(@"url host:%@",[url host]);
-
     if([[url scheme] isEqualToString:urlScheme]) {
         return YES;
     }
