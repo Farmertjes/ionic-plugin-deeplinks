@@ -19,8 +19,8 @@ static NSString *const PLUGIN_NAME = @"IonicDeeplinkPlugin";
 @implementation AppDelegate (IonicDeeplinkPlugin)
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    NSMutableString *sourceApp = [NSMutableString init];
-    NSMutableString *annotation = [NSMutableString init];
+    NSMutableString *sourceApp = [@"" mutableCopy];
+    NSMutableString *annotation = [@"" mutableCopy];
     if([options objectForKey:UIApplicationOpenURLOptionsSourceApplicationKey]) {
         sourceApp = [options objectForKey:UIApplicationOpenURLOptionsSourceApplicationKey];
     }
